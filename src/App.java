@@ -45,9 +45,16 @@ public class App {
         colaPersonas.add(p1);
         colaPersonas.add(p2);
         colaPersonas.add(p3);
-        colaPersonas.printCola;
+        colaPersonas.printCola();
         System.out.println("Persona atendida: "+ colaPersonas.remove());
-        colaPersonas.printCola;
+        colaPersonas.printCola();
+
+        Persona pb= colaPersonas.findByName("Juan");
+        System.out.println("Persona encontrada: "+ pb!=null? pb:"No encontrada");
+        Persona pE= colaPersonas.deleteByName("Pedro");
+        System.out.println("Persona eliminada: "+ pE !=null? pE:"No encontrada");
+        colaPersonas.printCola();
+
         
     }
 }
